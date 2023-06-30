@@ -42,7 +42,7 @@ extension Preferences {
 
 			return VStack(alignment: .preferenceSectionLabel) {
 				ForEach(0..<sections.count, id: \.self) { index in
-					viewForSection(sections, index: index)
+					self.viewForSection(sections, index: index)
 				}
 			}
 			.modifier(Section.LabelWidthModifier(maxWidth: $maxLabelWidth))
@@ -59,7 +59,7 @@ extension Preferences {
 						Divider()
 							// Strangely doesn't work without width being specified. Probably because of custom alignment.
 							.frame(width: CGFloat(contentWidth), height: 20.0)
-							.alignmentGuide(.preferenceSectionLabel) { $0[.leading] + maxLabelWidth }
+							.alignmentGuide(.preferenceSectionLabel) { $0[.leading] + self.maxLabelWidth }
 					}
 				} else {
 					sections[index]

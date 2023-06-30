@@ -71,7 +71,7 @@ struct AccountsView: View {
 	}
 }
 
-struct AccountsView_Previews: PreviewProvider {
+struct AccountsViewPreviews: PreviewProvider {
 	static var previews: some View {
 		AccountsView()
 	}

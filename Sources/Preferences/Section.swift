@@ -43,7 +43,7 @@ extension Preferences {
 			func body(content: Content) -> some View {
 				content
 					.onPreferenceChange(LabelWidthPreferenceKey.self) { newMaxWidth in
-						maxWidth = newMaxWidth
+						self.maxWidth = newMaxWidth
 					}
 			}
 		}
